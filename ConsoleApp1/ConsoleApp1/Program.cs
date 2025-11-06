@@ -2,6 +2,12 @@
 string username = Console.ReadLine();
 Console.WriteLine("Geef je wachtwoord in: ");
 string password = Console.ReadLine();
-Console.WriteLine(username);
-Console.WriteLine(password);
-Console.ReadKey();
+if (username == "jef" && password == "wachtwoord")
+{
+    Console.WriteLine("Welkom Jef.");
+}
+else
+{
+    Console.WriteLine("Foutieve login.");
+}
+    Console.ReadKey();
