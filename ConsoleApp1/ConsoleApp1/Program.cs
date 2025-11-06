@@ -1,13 +1,15 @@
-﻿Console.WriteLine("Geef je gebruikersnaam in: ");
+﻿int counter = 0;
+Console.Write("Geef je gebruikersnaam in: ");
 string username = Console.ReadLine();
-Console.WriteLine("Geef je wachtwoord in: ");
+Console.Write("Geef je wachtwoord in: ");
 string password = Console.ReadLine();
-if (username == "jef" && password == "wachtwoord")
+while(counter < 3 || (username != "jef" && password != "wachtwoord"))
 {
-    Console.WriteLine("Welkom Jef.");
+    Console.WriteLine("Foutieve login. Probeer opnieuw.");
+    Console.Write("Geef je gebruikersnaam in: ");
+    username = Console.ReadLine();
+    Console.Write("Geef je wachtwoord in: ");
+    password = Console.ReadLine();
+    counter++;
 }
-else
-{
-    Console.WriteLine("Foutieve login.");
-}
-    Console.ReadKey();
+Console.ReadKey();
